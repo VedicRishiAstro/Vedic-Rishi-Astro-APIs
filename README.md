@@ -52,24 +52,24 @@ This is the extension of basic panchang which provides various yog such as dwi-p
 **1\. Panchang at specified date and time**
 Here, following APIs are used and date and time along with latitude, longitude and timezone are expected -
 
-*   [1\. basic_panchang](https://www.vedicrishiastro.com/docs/api-ref/15/basic_panchang)
-*   [2\. planet_panchang](https://www.vedicrishiastro.com/docs/api-ref/16/planet_panchang)
-*   [3\. advanced_panchang](https://www.vedicrishiastro.com/docs/api-ref/19/advanced_panchang)
+*   [1\. basic_panchang](#-basic-panchang/basic_panchang)
+*   [2\. planet_panchang](#-basic-panchang/planet_panchang)
+*   [3\. advanced_panchang](#-advanced-panchang/advanced_panchang)
 
 **2\. Panchang at Sunsrise for given day**
 Following APIs should be used for getting the panchang data points at the time of sunrise which are used by traditional calendars-
 
-*   [1\. basic_panchang/sunrise](https://www.vedicrishiastro.com/docs/api-ref/17/basic_panchang/sunrise)
-*   [2\. planet_panchang/sunrise](https://www.vedicrishiastro.com/docs/api-ref/18/planet_panchang/sunrise)
-*   [2\. advanced_panchang/sunrise](https://www.vedicrishiastro.com/docs/api-ref/20/advanced_panchang/sunrise)
-*   [4\. chaughadiya_muhurta](https://www.vedicrishiastro.com/docs/api-ref/21/chaughadiya_muhurta)
-*   [5\. hora_muhurta](https://www.vedicrishiastro.com/docs/api-ref/22/hora_muhurta)
+*   [1\. basic_panchang/sunrise](#-basic-panchang/basic_panchang/sunrise)
+*   [2\. planet_panchang/sunrise](#-basic-panchang/planet_panchang/sunrise)
+*   [2\. advanced_panchang/sunrise](#-advanced-panchang/advanced_panchang/sunrise)
+*   [4\. chaughadiya_muhurta](#-advanced-panchang/chaughadiya_muhurta)
+*   [5\. hora_muhurta](#-advanced-panchang/hora_muhurta)
 
 **" Here only date along with latitude, longitude and timezone are expected to be passed. No time is required. "**
 
 ### advanced_panchang
 
-Provides panchang in details
+Provides panchang in details for given day at perticular given time.
 
 #### API Endpoint
 
@@ -200,7 +200,7 @@ advanced_panchang
 
 ### advanced_panchang/sunrise
 
-Provides panchang in details
+Provides panchang in details at the time of sunrise for given day.
 
 #### API Endpoint
 
@@ -219,8 +219,6 @@ advanced_panchang/sunrise
 | day      | int | Panchang day, eg: 10 |
 | month     | int      |   Panchang month, eg:5 |
 | year | int      |    Panchang year, eg:2015 |
-| hour | int | Panchang hour, eg:12 |
-| min | int | Panchang minute, eg:34 |
 | lat | float | Panchang place latitude, eg: 19.234|
 | lon | float | Panchang place longitude, eg: 72.843|
 | tzone | float | Panchang place timezone, eg: 5.5|
