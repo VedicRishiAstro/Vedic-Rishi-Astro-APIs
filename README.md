@@ -96,7 +96,7 @@ advanced_panchang
 | lon | float | Panchang place longitude, eg: 72.843|
 | tzone | float | Panchang place timezone, eg: 5.5|
 
-#### Response Data
+#### Response Data ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 ```javascript
 {
   "day": "Wednesday",
@@ -454,73 +454,105 @@ hora_muhurta
 #### Response Data
 ```javascript
 {
-  "chaughadiya": {
+  "hora": {
     "day": [
       {
-        "time": "5 : 41 : 01 - 4 : 06 : 50",
-        "muhurta": "Labh"
+        "time": "17:41 - 18:41",
+        "hora": "Mercury"
       },
       {
-        "time": "4 : 06 : 50 - 2 : 32 : 39",
-        "muhurta": "Amrit"
+        "time": "18:41 - 19:41",
+        "hora": "Moon"
       },
       {
-        "time": "2 : 32 : 39 - 12 : 58 : 27",
-        "muhurta": "Kaal"
+        "time": "19:41 - 20:41",
+        "hora": "Saturn"
       },
       {
-        "time": "12 : 58 : 27 - 11 : 24 : 16",
-        "muhurta": "Shubh"
+        "time": "20:41 - 21:41",
+        "hora": "Jupiter"
       },
       {
-        "time": "11 : 24 : 16 - 09 : 50 : 05",
-        "muhurta": "Rog"
+        "time": "21:41 - 22:41",
+        "hora": "Mars"
       },
       {
-        "time": "09 : 50 : 05 - 08 : 15 : 53",
-        "muhurta": "Udveg"
+        "time": "22:41 - 23:41",
+        "hora": "Sun"
       },
       {
-        "time": "08 : 15 : 53 - 06 : 41 : 42",
-        "muhurta": "Char"
+        "time": "23:41 - 0:41",
+        "hora": "Venus"
       },
       {
-        "time": "06 : 41 : 42 - 05 : 07 : 30",
-        "muhurta": "Labh"
+        "time": "0:41 - 1:41",
+        "hora": "Mercury"
+      },
+      {
+        "time": "1:41 - 2:41",
+        "hora": "Moon"
+      },
+      {
+        "time": "2:41 - 3:41",
+        "hora": "Saturn"
+      },
+      {
+        "time": "3:41 - 4:41",
+        "hora": "Jupiter"
+      },
+      {
+        "time": "4:41 - 5:41",
+        "hora": "Mars"
       }
     ],
     "night": [
       {
-        "time": "05 : 07 : 30 - 06 : 41 : 38",
-        "muhurta": "Udveg"
+        "time": "5:41 - 6:41",
+        "hora": "Sun"
       },
       {
-        "time": "06 : 41 : 38 - 08 : 15 : 46",
-        "muhurta": "Shubh"
+        "time": "6:41 - 7:41",
+        "hora": "Venus"
       },
       {
-        "time": "08 : 15 : 46 - 09 : 49 : 55",
-        "muhurta": "Amrit"
+        "time": "7:41 - 8:41",
+        "hora": "Mercury"
       },
       {
-        "time": "09 : 49 : 55 - 11 : 24 : 03",
-        "muhurta": "Char"
+        "time": "8:41 - 9:41",
+        "hora": "Moon"
       },
       {
-        "time": "11 : 24 : 03 - 12 : 58 : 11",
-        "muhurta": "Rog"
+        "time": "9:41 - 10:41",
+        "hora": "Saturn"
       },
       {
-        "time": "12 : 58 : 11 - 2 : 32 : 19",
-        "muhurta": "Kaal"
+        "time": "10:41 - 11:41",
+        "hora": "Jupiter"
       },
       {
-        "time": "2 : 32 : 19 - 4 : 06 : 27",
-        "muhurta": "Labh"
+        "time": "11:41 - 12:41",
+        "hora": "Mars"
       },
       {
-        "time": "4 : 06 : 27 - 5 : 40 : 35",
-        "muhurta": "Udveg"
+        "time": "12:41 - 13:41",
+        "hora": "Sun"
+      },
+      {
+        "time": "13:41 - 14:41",
+        "hora": "Venus"
+      },
+      {
+        "time": "14:41 - 15:41",
+        "hora": "Mercury"
+      },
+      {
+        "time": "15:41 - 16:41",
+        "hora": "Moon"
+      },
+      {
+        "time": "16:41 - 17:41",
+        "hora": "Saturn"
       }
     ]
   }
