@@ -96,7 +96,7 @@ advanced_panchang
 | lon | float | Panchang place longitude, eg: 72.843|
 | tzone | float | Panchang place timezone, eg: 5.5|
 
-#### Response Data ![alt text](https://pixabay.com/static/uploads/photo/2014/04/03/10/29/arrow-right-310628_960_720.png "Logo Title Text 1")
+#### Response Data ![alt text](https://github.com/VedicRishiAstro/Vedic-Rishi-Astro-APIs/blob/master/arrow-pointing-to-right.png "Logo Title Text 1")
 ```javascript
 {
   "day": "Wednesday",
@@ -223,7 +223,7 @@ advanced_panchang/sunrise
 | lon | float | Panchang place longitude, eg: 72.843|
 | tzone | float | Panchang place timezone, eg: 5.5|
 
-#### Response Data ![alt text](https://pixabay.com/static/uploads/photo/2014/04/03/10/29/arrow-right-310628_960_720.png "Logo Title Text 1")
+#### Response Data ![alt text](https://github.com/VedicRishiAstro/Vedic-Rishi-Astro-APIs/blob/master/arrow-pointing-to-right.png "Logo Title Text 1")
 ```javascript
 {
   "day": "Wednesday",
@@ -350,7 +350,7 @@ chaughadiya_muhurta
 | lon | float | Panchang place longitude, eg: 72.843|
 | tzone | float | Panchang place timezone, eg: 5.5|
 
-#### Response Data ![alt text](https://pixabay.com/static/uploads/photo/2014/04/03/10/29/arrow-right-310628_960_720.png "Logo Title Text 1")
+#### Response Data ![alt text](https://github.com/VedicRishiAstro/Vedic-Rishi-Astro-APIs/blob/master/arrow-pointing-to-right.png "Logo Title Text 1")
 ```javascript
 {
   "chaughadiya": {
@@ -451,7 +451,7 @@ hora_muhurta
 | lon | float | Panchang place longitude, eg: 72.843|
 | tzone | float | Panchang place timezone, eg: 5.5|
 
-#### Response Data  ![alt text](https://pixabay.com/static/uploads/photo/2014/04/03/10/29/arrow-right-310628_960_720.png "Logo Title Text 1")
+#### Response Data  ![alt text](https://github.com/VedicRishiAstro/Vedic-Rishi-Astro-APIs/blob/master/arrow-pointing-to-right.png "Logo Title Text 1")
 ```javascript
 {
   "hora": {
