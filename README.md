@@ -2,7 +2,7 @@
 
 Vedic Rishi does all the complex astronomical and algorithmic calculations for your astrology websites or astro-matching apps and provides you with simple APIs to create awesome user interfaces for your users
 
-### Vedic Rishi REST Web Service Interface
+#### Vedic Rishi REST Web Service Interface
 
 Since the Vedic Rishi Astro API is based on REST principles, it's very easy to write and test applications. You can use your browser to access URLs, and you can use pretty much any HTTP client in any programming language to interact with the API.
 
