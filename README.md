@@ -47,8 +47,7 @@ We have an official github account which maintains the official API clients writ
 
 This is the extension of basic panchang which provides various yog such as dwi-pushakar timing, tri-pushkar timing, sarvarth siddhi yog, amrit siddhi yog, ravi yog along with malefic yog such as rahu kal, yam-ghant kal and gulik kal.
 
-#### advanced_panchang
-## Advanced Panchang/advanced_panchang
+#### Advanced Panchang/advanced_panchang
 
 Provides panchang in details
 
