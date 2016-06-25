@@ -1,4 +1,4 @@
-###Vedic Rishi Astro APIs
+##Vedic Rishi Astro APIs
 
 Vedic Rishi does all the complex astronomical and algorithmic calculations for your astrology websites or astro-matching apps and provides you with simple APIs to create awesome user interfaces for your users
 
@@ -43,8 +43,7 @@ We have an official github account which maintains the official API clients writ
 
 [Vedic Rishi Astro API PHP Client](https://github.com/chandantiwari/Vedic-Rishi-Astro-API-PHP-Client)
 
-### Advanced Panchang
-=====================
+##Advanced Panchang
 
 This is the extension of basic panchang which provides various yog such as dwi-pushakar timing, tri-pushkar timing, sarvarth siddhi yog, amrit siddhi yog, ravi yog along with malefic yog such as rahu kal, yam-ghant kal and gulik kal.
 
