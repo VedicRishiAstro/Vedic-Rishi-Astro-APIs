@@ -81,3 +81,8 @@ Following APIs should be used for getting the panchang data points at the time o
 
 **" Here only date along with latitude, longitude and timezone are expected to be passed. No time is required. "**
 
+#### Request Data
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
