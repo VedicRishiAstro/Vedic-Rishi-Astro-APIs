@@ -82,7 +82,31 @@ Following APIs should be used for getting the panchang data points at the time o
 **" Here only date along with latitude, longitude and timezone are expected to be passed. No time is required. "**
 
 #### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| hour | int | Panchang hour, eg:12 |
+| min | int | Panchang minute, eg:34 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+
 ```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
+var requestData = 
+{
+    day : 10,
+    month : 5,
+    year : 2015,
+    hour : 12,
+    min : 34,
+    lat : 19.234,
+    lon : 72.843,
+    tzone : 5.5
+
+};
+
 ```
