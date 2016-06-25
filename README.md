@@ -47,20 +47,6 @@ We have an official github account which maintains the official API clients writ
 
 This is the extension of basic panchang which provides various yog such as dwi-pushakar timing, tri-pushkar timing, sarvarth siddhi yog, amrit siddhi yog, ravi yog along with malefic yog such as rahu kal, yam-ghant kal and gulik kal.
 
-### advanced_panchang
-
-Provides panchang in details
-
-#### API Endpoint
-
-advanced_panchang
-
-#### Method & URL
-
-| Method | Full URL |
-| --- | --- |
-| POST | https://api.vedicrishiastro.com/v1/advanced_panchang |
-
 #### We have two types of Panchang APIs
 
 **1\. Panchang at specified date and time**
@@ -80,6 +66,22 @@ Following APIs should be used for getting the panchang data points at the time o
 *   [5\. hora_muhurta](https://www.vedicrishiastro.com/docs/api-ref/22/hora_muhurta)
 
 **" Here only date along with latitude, longitude and timezone are expected to be passed. No time is required. "**
+
+### advanced_panchang
+
+Provides panchang in details
+
+#### API Endpoint
+
+advanced_panchang
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/advanced_panchang |
+
+
 
 #### Request Data
 
@@ -209,26 +211,6 @@ advanced_panchang/sunrise
 | Method | Full URL |
 | --- | --- |
 | POST | https://api.vedicrishiastro.com/v1/advanced_panchang |
-
-#### We have two types of Panchang APIs
-
-**1\. Panchang at specified date and time**
-Here, following APIs are used and date and time along with latitude, longitude and timezone are expected -
-
-*   [1\. basic_panchang](https://www.vedicrishiastro.com/docs/api-ref/15/basic_panchang)
-*   [2\. planet_panchang](https://www.vedicrishiastro.com/docs/api-ref/16/planet_panchang)
-*   [3\. advanced_panchang](https://www.vedicrishiastro.com/docs/api-ref/19/advanced_panchang)
-
-**2\. Panchang at Sunsrise for given day**
-Following APIs should be used for getting the panchang data points at the time of sunrise which are used by traditional calendars-
-
-*   [1\. basic_panchang/sunrise](https://www.vedicrishiastro.com/docs/api-ref/17/basic_panchang/sunrise)
-*   [2\. planet_panchang/sunrise](https://www.vedicrishiastro.com/docs/api-ref/18/planet_panchang/sunrise)
-*   [2\. advanced_panchang/sunrise](https://www.vedicrishiastro.com/docs/api-ref/20/advanced_panchang/sunrise)
-*   [4\. chaughadiya_muhurta](https://www.vedicrishiastro.com/docs/api-ref/21/chaughadiya_muhurta)
-*   [5\. hora_muhurta](https://www.vedicrishiastro.com/docs/api-ref/22/hora_muhurta)
-
-**" Here only date along with latitude, longitude and timezone are expected to be passed. No time is required. "**
 
 #### Request Data
 
