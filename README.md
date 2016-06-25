@@ -210,7 +210,7 @@ advanced_panchang/sunrise
 
 | Method | Full URL |
 | --- | --- |
-| POST | https://api.vedicrishiastro.com/v1/advanced_panchang |
+| POST | https://api.vedicrishiastro.com/v1/advanced_panchang/sunrise |
 
 #### Request Data
 
@@ -320,6 +320,209 @@ advanced_panchang/sunrise
   "yamghant_kaal": {
     "start": "08 : 30 : 29",
     "end": "09 : 57 : 59"
+  }
+}
+
+```
+
+### chaughadiya_muhurta
+
+Provides both day and night chaughadiya data.
+
+#### API Endpoint
+
+chaughadiya_muhurta
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/chaughadiya_muhurta |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data
+```javascript
+{
+  "chaughadiya": {
+    "day": [
+      {
+        "time": "5 : 41 : 01 - 4 : 06 : 50",
+        "muhurta": "Labh"
+      },
+      {
+        "time": "4 : 06 : 50 - 2 : 32 : 39",
+        "muhurta": "Amrit"
+      },
+      {
+        "time": "2 : 32 : 39 - 12 : 58 : 27",
+        "muhurta": "Kaal"
+      },
+      {
+        "time": "12 : 58 : 27 - 11 : 24 : 16",
+        "muhurta": "Shubh"
+      },
+      {
+        "time": "11 : 24 : 16 - 09 : 50 : 05",
+        "muhurta": "Rog"
+      },
+      {
+        "time": "09 : 50 : 05 - 08 : 15 : 53",
+        "muhurta": "Udveg"
+      },
+      {
+        "time": "08 : 15 : 53 - 06 : 41 : 42",
+        "muhurta": "Char"
+      },
+      {
+        "time": "06 : 41 : 42 - 05 : 07 : 30",
+        "muhurta": "Labh"
+      }
+    ],
+    "night": [
+      {
+        "time": "05 : 07 : 30 - 06 : 41 : 38",
+        "muhurta": "Udveg"
+      },
+      {
+        "time": "06 : 41 : 38 - 08 : 15 : 46",
+        "muhurta": "Shubh"
+      },
+      {
+        "time": "08 : 15 : 46 - 09 : 49 : 55",
+        "muhurta": "Amrit"
+      },
+      {
+        "time": "09 : 49 : 55 - 11 : 24 : 03",
+        "muhurta": "Char"
+      },
+      {
+        "time": "11 : 24 : 03 - 12 : 58 : 11",
+        "muhurta": "Rog"
+      },
+      {
+        "time": "12 : 58 : 11 - 2 : 32 : 19",
+        "muhurta": "Kaal"
+      },
+      {
+        "time": "2 : 32 : 19 - 4 : 06 : 27",
+        "muhurta": "Labh"
+      },
+      {
+        "time": "4 : 06 : 27 - 5 : 40 : 35",
+        "muhurta": "Udveg"
+      }
+    ]
+  }
+}
+
+```
+### hora_muhurta
+
+Provides day and night hora data.
+
+#### API Endpoint
+
+hora_muhurta
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/chaughadiya_muhurta |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data
+```javascript
+{
+  "chaughadiya": {
+    "day": [
+      {
+        "time": "5 : 41 : 01 - 4 : 06 : 50",
+        "muhurta": "Labh"
+      },
+      {
+        "time": "4 : 06 : 50 - 2 : 32 : 39",
+        "muhurta": "Amrit"
+      },
+      {
+        "time": "2 : 32 : 39 - 12 : 58 : 27",
+        "muhurta": "Kaal"
+      },
+      {
+        "time": "12 : 58 : 27 - 11 : 24 : 16",
+        "muhurta": "Shubh"
+      },
+      {
+        "time": "11 : 24 : 16 - 09 : 50 : 05",
+        "muhurta": "Rog"
+      },
+      {
+        "time": "09 : 50 : 05 - 08 : 15 : 53",
+        "muhurta": "Udveg"
+      },
+      {
+        "time": "08 : 15 : 53 - 06 : 41 : 42",
+        "muhurta": "Char"
+      },
+      {
+        "time": "06 : 41 : 42 - 05 : 07 : 30",
+        "muhurta": "Labh"
+      }
+    ],
+    "night": [
+      {
+        "time": "05 : 07 : 30 - 06 : 41 : 38",
+        "muhurta": "Udveg"
+      },
+      {
+        "time": "06 : 41 : 38 - 08 : 15 : 46",
+        "muhurta": "Shubh"
+      },
+      {
+        "time": "08 : 15 : 46 - 09 : 49 : 55",
+        "muhurta": "Amrit"
+      },
+      {
+        "time": "09 : 49 : 55 - 11 : 24 : 03",
+        "muhurta": "Char"
+      },
+      {
+        "time": "11 : 24 : 03 - 12 : 58 : 11",
+        "muhurta": "Rog"
+      },
+      {
+        "time": "12 : 58 : 11 - 2 : 32 : 19",
+        "muhurta": "Kaal"
+      },
+      {
+        "time": "2 : 32 : 19 - 4 : 06 : 27",
+        "muhurta": "Labh"
+      },
+      {
+        "time": "4 : 06 : 27 - 5 : 40 : 35",
+        "muhurta": "Udveg"
+      }
+    ]
   }
 }
 
