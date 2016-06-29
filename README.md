@@ -559,3 +559,184 @@ hora_muhurta
 }
 
 ```
+
+## Basic Ashtakvarga
+
+Provide details of Bhinnashtak varga And Servashtak Varga.
+
+### planet_ashtak/:planet_name
+
+Provides astakvarga chart points and table points.
+
+#### API Endpoint
+planet_ashtak/:planet_name
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/planet_ashtak/:planet_name |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Planet Name
+Here planet name means for which planet you want data.
+>Planet name's are as follow:- 
+>sun, moon, mars, mercury, jupiter, venus, saturn , ascendant
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+
+``` javascript
+{
+  "ashtak_varga": {
+    "type": "Bhinnashtak",
+    "planet": "Sun",
+    "sign": "virgo",
+    "sign_id": 6
+  },
+  "ashtak_points": {
+    "aries": {
+      "sun": 0,
+      "moon": 0,
+      "mars": 1,
+      "mercury": 0,
+      "jupiter": 0,
+      "venus": 0,
+      "saturn": 0,
+      "ascendant": 0,
+      "total": 1
+    },
+    "taurus": {
+      "sun": 1,
+      "moon": 1,
+      "mars": 0,
+      "mercury": 1,
+      "jupiter": 1,
+      "venus": 0,
+      "saturn": 1,
+      "ascendant": 1,
+      "total": 6
+    },
+    "gemini": {
+      "sun": 0,
+      "moon": 0,
+      "mars": 1,
+      "mercury": 1,
+      "jupiter": 0,
+      "venus": 0,
+      "saturn": 1,
+      "ascendant": 1,
+      "total": 4
+    },
+    "cancer": {
+      "sun": 0,
+      "moon": 0,
+      "mars": 0,
+      "mercury": 0,
+      "jupiter": 0,
+      "venus": 0,
+      "saturn": 1,
+      "ascendant": 1,
+      "total": 2
+    },
+    "leo": {
+      "sun": 1,
+      "moon": 1,
+      "mars": 0,
+      "mercury": 0,
+      "jupiter": 0,
+      "venus": 1,
+      "saturn": 1,
+      "ascendant": 0,
+      "total": 4
+    },
+    "virgo": {
+      "sun": 1,
+      "moon": 0,
+      "mars": 1,
+      "mercury": 1,
+      "jupiter": 0,
+      "venus": 1,
+      "saturn": 1,
+      "ascendant": 0,
+      "total": 5
+    },
+    "libra": {
+      "sun": 1,
+      "moon": 0,
+      "mars": 1,
+      "mercury": 1,
+      "jupiter": 0,
+      "venus": 0,
+      "saturn": 0,
+      "ascendant": 1,
+      "total": 4
+    },
+    "scorpio": {
+      "sun": 1,
+      "moon": 0,
+      "mars": 1,
+      "mercury": 1,
+      "jupiter": 1,
+      "venus": 0,
+      "saturn": 1,
+      "ascendant": 1,
+      "total": 6
+    },
+    "sagittarius": {
+      "sun": 1,
+      "moon": 1,
+      "mars": 1,
+      "mercury": 1,
+      "jupiter": 1,
+      "venus": 0,
+      "saturn": 1,
+      "ascendant": 0,
+      "total": 6
+    },
+    "capricorn": {
+      "sun": 0,
+      "moon": 1,
+      "mars": 1,
+      "mercury": 0,
+      "jupiter": 0,
+      "venus": 0,
+      "saturn": 0,
+      "ascendant": 1,
+      "total": 3
+    },
+    "aquarius": {
+      "sun": 1,
+      "moon": 0,
+      "mars": 0,
+      "mercury": 0,
+      "jupiter": 0,
+      "venus": 1,
+      "saturn": 1,
+      "ascendant": 0,
+      "total": 3
+    },
+    "pisces": {
+      "sun": 1,
+      "moon": 0,
+      "mars": 1,
+      "mercury": 1,
+      "jupiter": 1,
+      "venus": 0,
+      "saturn": 0,
+      "ascendant": 0,
+      "total": 4
+    }
+  }
+}
+
+````
