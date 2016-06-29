@@ -909,4 +909,51 @@ sarvashtak
 }
 ```
 
+## Basic Astro
+This package contains basic astrological details. Planetary configurations such as full degrees, normalised degrees, house position , nakshatra name, house lord and other details.
+
+### birth_details
+Along with birth details it provides sunrise, sunset, ayanamsha.
+
+#### API Endpoint
+birth_details
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/birth_details |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "year": 1992,
+  "month": 7,
+  "day": 22,
+  "hour": 9,
+  "minute": 21,
+  "latitude": 25.31668,
+  "longitude": 83.01042,
+  "timezone": 5.5,
+  "sunrise": "5:21:28",
+  "sunset": "18:49:35",
+  "ayanamsha": 23.753052294684778
+}
+```
+
+
+
+
+
 
