@@ -343,12 +343,12 @@ chaughadiya_muhurta
 
 | Params        | Data type     | Descriptions  |
 | ------------- |:-------------| :-----|
-| day      | int | Panchang day, eg: 10 |
-| month     | int      |   Panchang month, eg:5 |
-| year | int      |    Panchang year, eg:2015 |
-| lat | float | Panchang place latitude, eg: 19.234|
-| lon | float | Panchang place longitude, eg: 72.843|
-| tzone | float | Panchang place timezone, eg: 5.5|
+| day      | int | Chaughadiya day, eg: 10 |
+| month     | int      |   Chaughadiya month, eg:5 |
+| year | int      |    Chaughadiya year, eg:2015 |
+| lat | float | Chaughadiya place latitude, eg: 19.234|
+| lon | float | Chaughadiya place longitude, eg: 72.843|
+| tzone | float | Chaughadiya place timezone, eg: 5.5|
 
 #### Response Data ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
 ```javascript
@@ -444,12 +444,12 @@ hora_muhurta
 
 | Params        | Data type     | Descriptions  |
 | ------------- |:-------------| :-----|
-| day      | int | Panchang day, eg: 10 |
-| month     | int      |   Panchang month, eg:5 |
-| year | int      |    Panchang year, eg:2015 |
-| lat | float | Panchang place latitude, eg: 19.234|
-| lon | float | Panchang place longitude, eg: 72.843|
-| tzone | float | Panchang place timezone, eg: 5.5|
+| day      | int | Hora day, eg: 10 |
+| month     | int      |   Hora month, eg:5 |
+| year | int      |    Hora year, eg:2015 |
+| lat | float | Hora place latitude, eg: 19.234|
+| lon | float | Hora place longitude, eg: 72.843|
+| tzone | float | Hora place timezone, eg: 5.5|
 
 #### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
 ```javascript
@@ -581,12 +581,12 @@ planet_ashtak/:planet_name
 
 | Params        | Data type     | Descriptions  |
 | ------------- |:-------------| :-----|
-| day      | int | Panchang day, eg: 10 |
-| month     | int      |   Panchang month, eg:5 |
-| year | int      |    Panchang year, eg:2015 |
-| lat | float | Panchang place latitude, eg: 19.234|
-| lon | float | Panchang place longitude, eg: 72.843|
-| tzone | float | Panchang place timezone, eg: 5.5|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
 
 #### Planet Name
 Here planet name means for which planet you want data.
@@ -758,12 +758,12 @@ sarvashtak
 
 | Params        | Data type     | Descriptions  |
 | ------------- |:-------------| :-----|
-| day      | int | Panchang day, eg: 10 |
-| month     | int      |   Panchang month, eg:5 |
-| year | int      |    Panchang year, eg:2015 |
-| lat | float | Panchang place latitude, eg: 19.234|
-| lon | float | Panchang place longitude, eg: 72.843|
-| tzone | float | Panchang place timezone, eg: 5.5|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
 
 #### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
 
@@ -928,12 +928,12 @@ birth_details
 
 | Params        | Data type     | Descriptions  |
 | ------------- |:-------------| :-----|
-| day      | int | Panchang day, eg: 10 |
-| month     | int      |   Panchang month, eg:5 |
-| year | int      |    Panchang year, eg:2015 |
-| lat | float | Panchang place latitude, eg: 19.234|
-| lon | float | Panchang place longitude, eg: 72.843|
-| tzone | float | Panchang place timezone, eg: 5.5|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
 
 #### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
 ```json
@@ -952,8 +952,1151 @@ birth_details
 }
 ```
 
+### astro_details
+Provides the complete avakahada details e.g. nakshtatra, charan, tithe, karan, yog ,varna, vashaya
+
+#### API Endpoint
+astro_details
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/astro_details |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "Varna": "Kshatriya",
+  "Vashya": "Chatuspad",
+  "Yoni": "Gaj",
+  "Gan": "Manushya",
+  "Nadi": "Madhya",
+  "SignLord": "Mars",
+  "sign": "Aries",
+  "Naksahtra": "Bharni",
+  "NaksahtraLord": "Venus",
+  "Charan": 3,
+  "Yog": "Dhriti",
+  "Karan": "Baalav",
+  "Tithi": "Krishna Ekadashi",
+  "yunja": "Poorva",
+  "tatva": "Fire",
+  "name_alphabet": "Le",
+  "paya": "Gold"
+}
+```
+
+### planets
+Full planetary positions including ascendant along with retrograde status and nakshatra, house, sign
+
+#### API Endpoint
+planets
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/planets |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "id": 0,
+    "name": "Sun",
+    "fullDegree": 75.01867995815415,
+    "normDegree": 15.018679958154152,
+    "speed": 0.9536705592639696,
+    "isRetro": "false",
+    "sign": "Gemini",
+    "signLord": "Mercury",
+    "nakshatra": "Ardra",
+    "nakshatraLord": "Rahu",
+    "house": 8
+  },
+  {
+    "id": 1,
+    "name": "Moon",
+    "fullDegree": 21.349425872500603,
+    "normDegree": 21.349425872500603,
+    "speed": 14.508795375227711,
+    "isRetro": "false",
+    "sign": "Aries",
+    "signLord": "Mars",
+    "nakshatra": "Bharni",
+    "nakshatraLord": "Venus",
+    "house": 6
+  },
+  {
+    "id": 2,
+    "name": "Mars",
+    "fullDegree": 208.9733013285976,
+    "normDegree": 28.973301328597614,
+    "speed": 0.006922409248668087,
+    "isRetro": "false",
+    "sign": "Libra",
+    "signLord": "Venus",
+    "nakshatra": "Vishakha",
+    "nakshatraLord": "Jupiter",
+    "house": 12
+  },
+  {
+    "id": 3,
+    "name": "Mercury",
+    "fullDegree": 66.99705831618833,
+    "normDegree": 6.99705831618833,
+    "speed": 2.1177691946516783,
+    "isRetro": "false",
+    "sign": "Gemini",
+    "signLord": "Mercury",
+    "nakshatra": "Ardra",
+    "nakshatraLord": "Rahu",
+    "house": 8
+  },
+  {
+    "id": 4,
+    "name": "Jupiter",
+    "fullDegree": 142.918341542849,
+    "normDegree": 22.918341542848992,
+    "speed": 0.1342132692506382,
+    "isRetro": "false",
+    "sign": "Leo",
+    "signLord": "Sun",
+    "nakshatra": "Purva Phalguni",
+    "nakshatraLord": "Venus",
+    "house": 10
+  },
+  {
+    "id": 5,
+    "name": "Venus",
+    "fullDegree": 81.47939061863748,
+    "normDegree": 21.47939061863748,
+    "speed": 1.2289210832023776,
+    "isRetro": "false",
+    "sign": "Gemini",
+    "signLord": "Mercury",
+    "nakshatra": "Punarvasu",
+    "nakshatraLord": "Jupiter",
+    "house": 8
+  },
+  {
+    "id": 6,
+    "name": "Saturn",
+    "fullDegree": 227.1367070622203,
+    "normDegree": 17.136707062220296,
+    "speed": -0.06081092063358652,
+    "isRetro": "true",
+    "sign": "Scorpio",
+    "signLord": "Mars",
+    "nakshatra": "Jyeshtha",
+    "nakshatraLord": "Mercury",
+    "house": 1
+  },
+  {
+    "id": 7,
+    "name": "Rahu",
+    "fullDegree": 141.91126603349858,
+    "normDegree": 21.911266033498578,
+    "speed": -0.05295380733459039,
+    "isRetro": "true",
+    "sign": "Leo",
+    "signLord": "Sun",
+    "nakshatra": "Purva Phalguni",
+    "nakshatraLord": "Venus",
+    "house": 10
+  },
+  {
+    "id": 8,
+    "name": "Ketu",
+    "fullDegree": 321.9112660334986,
+    "normDegree": 21.911266033498578,
+    "speed": -0.05295380733459039,
+    "isRetro": "true",
+    "sign": "Aquarius",
+    "signLord": "Saturn",
+    "nakshatra": "Purva Bhadrapad",
+    "nakshatraLord": "Jupiter",
+    "house": 4
+  },
+  {
+    "id": 9,
+    "name": "Ascendant",
+    "fullDegree": 226.9999482337994,
+    "normDegree": 16.999948233799387,
+    "speed": 0,
+    "isRetro": false,
+    "sign": "Scorpio",
+    "signLord": "Mars",
+    "nakshatra": "Jyeshtha",
+    "nakshatraLord": "Mercury",
+    "house": 1
+  }
+]
+```
+
+### planets/extended
+Full planetary positions including ascendant along with,neptune,pluto,uranus, retrograde status and nakshatra, house, sign
+
+#### API Endpoint
+planets/extended
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/planets/extended |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "id": 0,
+    "name": "Sun",
+    "fullDegree": 75.01867995815415,
+    "normDegree": 15.018679958154152,
+    "speed": 0.9536705592639696,
+    "isRetro": "false",
+    "sign": "Gemini",
+    "signLord": "Mercury",
+    "nakshatra": "Ardra",
+    "nakshatraLord": "Rahu",
+    "house": 8
+  },
+  {
+    "id": 1,
+    "name": "Moon",
+    "fullDegree": 21.349425872500603,
+    "normDegree": 21.349425872500603,
+    "speed": 14.508795375227711,
+    "isRetro": "false",
+    "sign": "Aries",
+    "signLord": "Mars",
+    "nakshatra": "Bharni",
+    "nakshatraLord": "Venus",
+    "house": 6
+  },
+  {
+    "id": 2,
+    "name": "Mars",
+    "fullDegree": 208.9733013285976,
+    "normDegree": 28.973301328597614,
+    "speed": 0.006922409248668087,
+    "isRetro": "false",
+    "sign": "Libra",
+    "signLord": "Venus",
+    "nakshatra": "Vishakha",
+    "nakshatraLord": "Jupiter",
+    "house": 12
+  },
+  {
+    "id": 3,
+    "name": "Mercury",
+    "fullDegree": 66.99705831618833,
+    "normDegree": 6.99705831618833,
+    "speed": 2.1177691946516783,
+    "isRetro": "false",
+    "sign": "Gemini",
+    "signLord": "Mercury",
+    "nakshatra": "Ardra",
+    "nakshatraLord": "Rahu",
+    "house": 8
+  },
+  {
+    "id": 4,
+    "name": "Jupiter",
+    "fullDegree": 142.918341542849,
+    "normDegree": 22.918341542848992,
+    "speed": 0.1342132692506382,
+    "isRetro": "false",
+    "sign": "Leo",
+    "signLord": "Sun",
+    "nakshatra": "Purva Phalguni",
+    "nakshatraLord": "Venus",
+    "house": 10
+  },
+  {
+    "id": 5,
+    "name": "Venus",
+    "fullDegree": 81.47939061863748,
+    "normDegree": 21.47939061863748,
+    "speed": 1.2289210832023776,
+    "isRetro": "false",
+    "sign": "Gemini",
+    "signLord": "Mercury",
+    "nakshatra": "Punarvasu",
+    "nakshatraLord": "Jupiter",
+    "house": 8
+  },
+  {
+    "id": 6,
+    "name": "Saturn",
+    "fullDegree": 227.1367070622203,
+    "normDegree": 17.136707062220296,
+    "speed": -0.06081092063358652,
+    "isRetro": "true",
+    "sign": "Scorpio",
+    "signLord": "Mars",
+    "nakshatra": "Jyeshtha",
+    "nakshatraLord": "Mercury",
+    "house": 1
+  },
+  {
+    "id": 7,
+    "name": "Rahu",
+    "fullDegree": 141.91126603349858,
+    "normDegree": 21.911266033498578,
+    "speed": -0.05295380733459039,
+    "isRetro": "true",
+    "sign": "Leo",
+    "signLord": "Sun",
+    "nakshatra": "Purva Phalguni",
+    "nakshatraLord": "Venus",
+    "house": 10
+  },
+  {
+    "id": 8,
+    "name": "Ketu",
+    "fullDegree": 321.9112660334986,
+    "normDegree": 21.911266033498578,
+    "speed": -0.05295380733459039,
+    "isRetro": "true",
+    "sign": "Aquarius",
+    "signLord": "Saturn",
+    "nakshatra": "Purva Bhadrapad",
+    "nakshatraLord": "Jupiter",
+    "house": 4
+  },
+  {
+    "id": 9,
+    "name": "Uranus",
+    "fullDegree": 0.07398734010829626,
+    "normDegree": 0.07398734010829626,
+    "speed": 0.023347690928066378,
+    "isRetro": "false",
+    "sign": "Aries",
+    "signLord": "Mars",
+    "nakshatra": "Ashwini",
+    "nakshatraLord": "Ketu",
+    "house": 6
+  },
+  {
+    "id": 10,
+    "name": "Neptune",
+    "fullDegree": 317.8804645006421,
+    "normDegree": 17.88046450064212,
+    "speed": -0.008730756309788675,
+    "isRetro": "true",
+    "sign": "Aquarius",
+    "signLord": "Saturn",
+    "nakshatra": "Shatbhisha",
+    "nakshatraLord": "Rahu",
+    "house": 4
+  },
+  {
+    "id": 11,
+    "name": "Pluto",
+    "fullDegree": 262.3049584494822,
+    "normDegree": 22.30495844948223,
+    "speed": -0.024507476510135368,
+    "isRetro": "true",
+    "sign": "Sagittarius",
+    "signLord": "Jupiter",
+    "nakshatra": "Purva Shadha",
+    "nakshatraLord": "Venus",
+    "house": 2
+  },
+  {
+    "id": 12,
+    "name": "Ascendant",
+    "fullDegree": 226.9999482337994,
+    "normDegree": 16.999948233799387,
+    "speed": 0,
+    "isRetro": false,
+    "sign": "Scorpio",
+    "signLord": "Mars",
+    "nakshatra": "Jyeshtha",
+    "nakshatraLord": "Mercury",
+    "house": 1
+  }
+]
+```
 
 
+### planets/tropical
+Full planetary positions including ascendant along with,neptune,pluto,uranus, retrograde status and nakshatra, house, sign
+
+#### API Endpoint
+planets/tropical
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/planets/tropical |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "name": "Sun",
+    "fullDegree": 99.1050399130805,
+    "normDegree": 9.105039913080503,
+    "speed": 0.9536792374523747,
+    "isRetro": "false",
+    "sign": "Cancer",
+    "house": 8
+  },
+  {
+    "name": "Moon",
+    "fullDegree": 45.43578582742696,
+    "normDegree": 15.435785827426962,
+    "speed": 14.508803543221283,
+    "isRetro": "false",
+    "sign": "Taurus",
+    "house": 6
+  },
+  {
+    "name": "Mars",
+    "fullDegree": 233.05966128352392,
+    "normDegree": 23.059661283523923,
+    "speed": 0.006931346565207917,
+    "isRetro": "false",
+    "sign": "Scorpio",
+    "house": 12
+  },
+  {
+    "name": "Mercury",
+    "fullDegree": 91.08341827111468,
+    "normDegree": 1.083418271114681,
+    "speed": 2.1177778714756146,
+    "isRetro": "false",
+    "sign": "Cancer",
+    "house": 8
+  },
+  {
+    "name": "Jupiter",
+    "fullDegree": 167.00470149777536,
+    "normDegree": 17.004701497775358,
+    "speed": 0.13422175459680458,
+    "isRetro": "false",
+    "sign": "Virgo",
+    "house": 10
+  },
+  {
+    "name": "Venus",
+    "fullDegree": 105.56575057356383,
+    "normDegree": 15.565750573563832,
+    "speed": 1.228929722803493,
+    "isRetro": "false",
+    "sign": "Cancer",
+    "house": 8
+  },
+  {
+    "name": "Saturn",
+    "fullDegree": 251.22306701714663,
+    "normDegree": 11.223067017146633,
+    "speed": -0.06080233543846638,
+    "isRetro": "true",
+    "sign": "Sagittarius",
+    "house": 1
+  },
+  {
+    "name": "Rahu",
+    "fullDegree": 24.16034729503465,
+    "normDegree": 24.16034729503465,
+    "speed": 0.023356277817296992,
+    "isRetro": "false",
+    "sign": "Aries",
+    "house": 5
+  },
+  {
+    "name": "Ketu",
+    "fullDegree": 341.9668244555685,
+    "normDegree": 11.966824455568485,
+    "speed": -0.008722211638006301,
+    "isRetro": "true",
+    "sign": "Pisces",
+    "house": 4
+  },
+  {
+    "name": "Uranus",
+    "fullDegree": 286.3913184044086,
+    "normDegree": 16.391318404408594,
+    "speed": -0.02449873391267724,
+    "isRetro": "true",
+    "sign": "Capricorn",
+    "house": 2
+  },
+  {
+    "name": "Ascendant",
+    "fullDegree": 251.08743445798456,
+    "normDegree": 11.087434457984557,
+    "speed": "-",
+    "isRetro": false,
+    "sign": "Sagittarius",
+    "house": 1
+  }
+]
+```
+
+## Basic Char Dasha
+Get the sequence of all Char Dasha
+
+### major_chardasha
+Get the complete Major Char Dasha periods along with start and end dates for the given birth detail.
+
+#### API Endpoint
+major_chardasha
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/major_chardasha |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "sign_id": 7,
+    "sign_name": "Scorpio",
+    "duration": "11 Years",
+    "start_date": "30-6-2016",
+    "end_date": "30-6-2027"
+  },
+  {
+    "sign_id": 6,
+    "sign_name": "Libra",
+    "duration": "8 Years",
+    "start_date": "30-6-2027",
+    "end_date": "30-6-2035"
+  },
+  {
+    "sign_id": 5,
+    "sign_name": "Virgo",
+    "duration": "3 Years",
+    "start_date": "30-6-2035",
+    "end_date": "30-6-2038"
+  },
+  {
+    "sign_id": 4,
+    "sign_name": "Leo",
+    "duration": "2 Years",
+    "start_date": "30-6-2038",
+    "end_date": "30-6-2040"
+  },
+  {
+    "sign_id": 3,
+    "sign_name": "Cancer",
+    "duration": "3 Years",
+    "start_date": "30-6-2040",
+    "end_date": "30-6-2043"
+  },
+  {
+    "sign_id": 2,
+    "sign_name": "Gemini",
+    "duration": "12 Years",
+    "start_date": "30-6-2043",
+    "end_date": "30-6-2055"
+  },
+  {
+    "sign_id": 1,
+    "sign_name": "Taurus",
+    "duration": "1 Years",
+    "start_date": "30-6-2055",
+    "end_date": "30-6-2056"
+  },
+  {
+    "sign_id": 0,
+    "sign_name": "Aries",
+    "duration": "6 Years",
+    "start_date": "30-6-2056",
+    "end_date": "30-6-2062"
+  },
+  {
+    "sign_id": 11,
+    "sign_name": "Pisces",
+    "duration": "7 Years",
+    "start_date": "30-6-2062",
+    "end_date": "30-6-2069"
+  },
+  {
+    "sign_id": 10,
+    "sign_name": "Aquarius",
+    "duration": "6 Years",
+    "start_date": "30-6-2069",
+    "end_date": "30-6-2075"
+  },
+  {
+    "sign_id": 9,
+    "sign_name": "Capricorn",
+    "duration": "2 Years",
+    "start_date": "30-6-2075",
+    "end_date": "30-6-2077"
+  },
+  {
+    "sign_id": 8,
+    "sign_name": "Sagittarius",
+    "duration": "8 Years",
+    "start_date": "30-6-2077",
+    "end_date": "30-6-2085"
+  }
+]
+```
+
+### major_chardasha
+Get the complete Major Char Dasha periods along with start and end dates for the given birth detail.
+
+#### API Endpoint
+major_chardasha
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/major_chardasha |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "sign_id": 7,
+    "sign_name": "Scorpio",
+    "duration": "11 Years",
+    "start_date": "30-6-2016",
+    "end_date": "30-6-2027"
+  },
+  {
+    "sign_id": 6,
+    "sign_name": "Libra",
+    "duration": "8 Years",
+    "start_date": "30-6-2027",
+    "end_date": "30-6-2035"
+  },
+  {
+    "sign_id": 5,
+    "sign_name": "Virgo",
+    "duration": "3 Years",
+    "start_date": "30-6-2035",
+    "end_date": "30-6-2038"
+  },
+  {
+    "sign_id": 4,
+    "sign_name": "Leo",
+    "duration": "2 Years",
+    "start_date": "30-6-2038",
+    "end_date": "30-6-2040"
+  },
+  {
+    "sign_id": 3,
+    "sign_name": "Cancer",
+    "duration": "3 Years",
+    "start_date": "30-6-2040",
+    "end_date": "30-6-2043"
+  },
+  {
+    "sign_id": 2,
+    "sign_name": "Gemini",
+    "duration": "12 Years",
+    "start_date": "30-6-2043",
+    "end_date": "30-6-2055"
+  },
+  {
+    "sign_id": 1,
+    "sign_name": "Taurus",
+    "duration": "1 Years",
+    "start_date": "30-6-2055",
+    "end_date": "30-6-2056"
+  },
+  {
+    "sign_id": 0,
+    "sign_name": "Aries",
+    "duration": "6 Years",
+    "start_date": "30-6-2056",
+    "end_date": "30-6-2062"
+  },
+  {
+    "sign_id": 11,
+    "sign_name": "Pisces",
+    "duration": "7 Years",
+    "start_date": "30-6-2062",
+    "end_date": "30-6-2069"
+  },
+  {
+    "sign_id": 10,
+    "sign_name": "Aquarius",
+    "duration": "6 Years",
+    "start_date": "30-6-2069",
+    "end_date": "30-6-2075"
+  },
+  {
+    "sign_id": 9,
+    "sign_name": "Capricorn",
+    "duration": "2 Years",
+    "start_date": "30-6-2075",
+    "end_date": "30-6-2077"
+  },
+  {
+    "sign_id": 8,
+    "sign_name": "Sagittarius",
+    "duration": "8 Years",
+    "start_date": "30-6-2077",
+    "end_date": "30-6-2085"
+  }
+]
+```
+
+### current_chardasha
+Returns the currently undergoing Char Dasha. It provides Major Period, Sub Period and Complete sub-sub period for the current date.
+
+#### API Endpoint
+current_chardasha
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/current_chardasha |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "dasha_date": "30-6-2016",
+  "major_dasha": {
+    "sign_id": 7,
+    "sign_name": "Scorpio",
+    "duration": "11 Years",
+    "start_date": "30-6-2016",
+    "end_date": "30-6-2027"
+  },
+  "sub_dasha": {
+    "sign_id": 6,
+    "sign_name": "Libra",
+    "duration": "11 Months",
+    "start_date": "30-6-2016",
+    "end_date": "30-5-2017"
+  },
+  "sub_sub_dasha": {
+    "sign_id": 7,
+    "sign_name": "Scorpio",
+    "start_date": "30-6-2016",
+    "end_date": "27-7-2016"
+  }
+}
+```
+
+### sub_chardasha
+Get all the sub periods of char dasha for the given major period rashi name in the API variable
+
+#### API Endpoint
+sub_chardasha/:sign_name
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/sub_chardasha/:sign_name |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json{
+  "major_dasha": {
+    "sign_id": 0,
+    "sign_name": "Aries",
+    "duration": "3 Years",
+    "start_date": "16-8-2027",
+    "end_date": "16-8-2030"
+  },
+  "sub_dasha": [
+    {
+      "sign_id": 1,
+      "sign_name": "Taurus",
+      "start_date": "16-8-2027",
+      "end_date": "16-11-2027",
+      "start_ms": 1818388800000,
+      "end_ms": 1826341200000
+    },
+    {
+      "sign_id": 2,
+      "sign_name": "Gemini",
+      "start_date": "16-11-2027",
+      "end_date": "16-2-2028",
+      "start_ms": 1826341200000,
+      "end_ms": 1834290000000
+    },
+    {
+      "sign_id": 3,
+      "sign_name": "Cancer",
+      "start_date": "16-2-2028",
+      "end_date": "16-5-2028",
+      "start_ms": 1834290000000,
+      "end_ms": 1842062400000
+    },
+    {
+      "sign_id": 4,
+      "sign_name": "Leo",
+      "start_date": "16-5-2028",
+      "end_date": "16-8-2028",
+      "start_ms": 1842062400000,
+      "end_ms": 1850011200000
+    },
+    {
+      "sign_id": 5,
+      "sign_name": "Virgo",
+      "start_date": "16-8-2028",
+      "end_date": "16-11-2028",
+      "start_ms": 1850011200000,
+      "end_ms": 1857963600000
+    },
+    {
+      "sign_id": 6,
+      "sign_name": "Libra",
+      "start_date": "16-11-2028",
+      "end_date": "16-2-2029",
+      "start_ms": 1857963600000,
+      "end_ms": 1865912400000
+    },
+    {
+      "sign_id": 7,
+      "sign_name": "Scorpio",
+      "start_date": "16-2-2029",
+      "end_date": "16-5-2029",
+      "start_ms": 1865912400000,
+      "end_ms": 1873598400000
+    },
+    {
+      "sign_id": 8,
+      "sign_name": "Sagittarius",
+      "start_date": "16-5-2029",
+      "end_date": "16-8-2029",
+      "start_ms": 1873598400000,
+      "end_ms": 1881547200000
+    },
+    {
+      "sign_id": 9,
+      "sign_name": "Capricorn",
+      "start_date": "16-8-2029",
+      "end_date": "16-11-2029",
+      "start_ms": 1881547200000,
+      "end_ms": 1889499600000
+    },
+    {
+      "sign_id": 10,
+      "sign_name": "Aquarius",
+      "start_date": "16-11-2029",
+      "end_date": "16-2-2030",
+      "start_ms": 1889499600000,
+      "end_ms": 1897448400000
+    },
+    {
+      "sign_id": 11,
+      "sign_name": "Pisces",
+      "start_date": "16-2-2030",
+      "end_date": "16-5-2030",
+      "start_ms": 1897448400000,
+      "end_ms": 1905134400000
+    },
+    {
+      "sign_id": 0,
+      "sign_name": "Aries",
+      "start_date": "16-5-2030",
+      "end_date": "16-8-2030",
+      "start_ms": 1905134400000,
+      "end_ms": 1913083200000
+    }
+  ]
+}
+```
+
+### sub_chardasha/:majorSign/:subSign
+Get all the sub periods of char dasha for the given major period rashi name in the API variable
+
+#### API Endpoint
+sub_chardasha/:majorSign/:subSign
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/sub_chardasha/:majorSign/:subSign |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "major_dasha": {
+    "sign_id": 0,
+    "sign_name": "Aries",
+    "duration": "6 Years",
+    "start_date": "30-6-2056",
+    "end_date": "30-6-2062"
+  },
+  "sub_dasha": {
+    "sign_id": 3,
+    "sign_name": "Cancer",
+    "duration": "6 Months",
+    "start_date": "30-6-2057",
+    "end_date": "30-12-2057"
+  },
+  "sub_sub_dasha": [
+    {
+      "sign_id": 2,
+      "sign_name": "Gemini",
+      "start_date": "30-6-2057",
+      "end_date": "15-7-2057",
+      "start_ms": 2761099200000,
+      "end_ms": 2762416800000
+    },
+    {
+      "sign_id": 1,
+      "sign_name": "Taurus",
+      "start_date": "15-7-2057",
+      "end_date": "30-7-2057",
+      "start_ms": 2762416800000,
+      "end_ms": 2763734400000
+    },
+    {
+      "sign_id": 0,
+      "sign_name": "Aries",
+      "start_date": "30-7-2057",
+      "end_date": "14-8-2057",
+      "start_ms": 2763734400000,
+      "end_ms": 2765052000000
+    },
+    {
+      "sign_id": 11,
+      "sign_name": "Pisces",
+      "start_date": "14-8-2057",
+      "end_date": "30-8-2057",
+      "start_ms": 2765052000000,
+      "end_ms": 2766369600000
+    },
+    {
+      "sign_id": 10,
+      "sign_name": "Aquarius",
+      "start_date": "30-8-2057",
+      "end_date": "14-9-2057",
+      "start_ms": 2766369600000,
+      "end_ms": 2767687200000
+    },
+    {
+      "sign_id": 9,
+      "sign_name": "Capricorn",
+      "start_date": "14-9-2057",
+      "end_date": "29-9-2057",
+      "start_ms": 2767687200000,
+      "end_ms": 2769004800000
+    },
+    {
+      "sign_id": 8,
+      "sign_name": "Sagittarius",
+      "start_date": "29-9-2057",
+      "end_date": "14-10-2057",
+      "start_ms": 2769004800000,
+      "end_ms": 2770322400000
+    },
+    {
+      "sign_id": 7,
+      "sign_name": "Scorpio",
+      "start_date": "14-10-2057",
+      "end_date": "30-10-2057",
+      "start_ms": 2770322400000,
+      "end_ms": 2771640000000
+    },
+    {
+      "sign_id": 6,
+      "sign_name": "Libra",
+      "start_date": "30-10-2057",
+      "end_date": "14-11-2057",
+      "start_ms": 2771640000000,
+      "end_ms": 2772961200000
+    },
+    {
+      "sign_id": 5,
+      "sign_name": "Virgo",
+      "start_date": "14-11-2057",
+      "end_date": "29-11-2057",
+      "start_ms": 2772961200000,
+      "end_ms": 2774278800000
+    },
+    {
+      "sign_id": 4,
+      "sign_name": "Leo",
+      "start_date": "29-11-2057",
+      "end_date": "14-12-2057",
+      "start_ms": 2774278800000,
+      "end_ms": 2775596400000
+    },
+    {
+      "sign_id": 3,
+      "sign_name": "Cancer",
+      "start_date": "14-12-2057",
+      "end_date": "30-12-2057",
+      "start_ms": 2775596400000,
+      "end_ms": 2776914000000
+    }
+  ]
+}
+
+```
 
 
+## Basic Gemstone Suggestions
+Provides report of Gems and Remedies with Life Stone, Lucky Stone, Benefic Stone, Stone details as per Vimsottari Mahadasha period.
+
+### basic_gem_suggestion
+This api recommends life stone,lucky stone,benefic stone.
+
+
+#### API Endpoint
+basic_gem_suggestion
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/basic_gem_suggestion|
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "LIFE": {
+    "name": "Red Coral",
+    "semi_gem": "Red Agate",
+    "wear_finger": "Index",
+    "weight_caret": "6 - 10.25",
+    "wear_metal": "Gold",
+    "wear_day": "Tuesday",
+    "gem_deity": "Mars"
+  },
+  "BENEFIC": {
+    "name": "Opal",
+    "semi_gem": "Opal/Zircon",
+    "wear_finger": "Little",
+    "weight_caret": "1 - 4.25",
+    "wear_metal": "Silver",
+    "wear_day": "Friday",
+    "gem_deity": "Venus"
+  },
+  "LUCKY": {
+    "name": "Emerald",
+    "semi_gem": "Onyx",
+    "wear_finger": "Little",
+    "weight_caret": " 4 - 6.25",
+    "wear_metal": "Gold",
+    "wear_day": "Wednesday",
+    "gem_deity": "Mercury"
+  }
+}
+
+```
 
