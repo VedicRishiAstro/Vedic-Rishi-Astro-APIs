@@ -1600,119 +1600,6 @@ major_chardasha
 ]
 ```
 
-### major_chardasha
-Get the complete Major Char Dasha periods along with start and end dates for the given birth detail.
-
-#### API Endpoint
-major_chardasha
-
-#### Method & URL
-
-| Method | Full URL |
-| --- | --- |
-| POST | https://api.vedicrishiastro.com/v1/major_chardasha |
-
-#### Request Data
-
-| Params        | Data type     | Descriptions  |
-| ------------- |:-------------| :-----|
-| day      | int | Birth day, eg: 10 |
-| month     | int      |   Birth month, eg:5 |
-| year | int      |    Birth year, eg:2015 |
-| lat | float | Birth place latitude, eg: 19.234|
-| lon | float | Birth place longitude, eg: 72.843|
-| tzone | float | Birth place timezone, eg: 5.5|
-
-#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
-```json
-[
-  {
-    "sign_id": 7,
-    "sign_name": "Scorpio",
-    "duration": "11 Years",
-    "start_date": "30-6-2016",
-    "end_date": "30-6-2027"
-  },
-  {
-    "sign_id": 6,
-    "sign_name": "Libra",
-    "duration": "8 Years",
-    "start_date": "30-6-2027",
-    "end_date": "30-6-2035"
-  },
-  {
-    "sign_id": 5,
-    "sign_name": "Virgo",
-    "duration": "3 Years",
-    "start_date": "30-6-2035",
-    "end_date": "30-6-2038"
-  },
-  {
-    "sign_id": 4,
-    "sign_name": "Leo",
-    "duration": "2 Years",
-    "start_date": "30-6-2038",
-    "end_date": "30-6-2040"
-  },
-  {
-    "sign_id": 3,
-    "sign_name": "Cancer",
-    "duration": "3 Years",
-    "start_date": "30-6-2040",
-    "end_date": "30-6-2043"
-  },
-  {
-    "sign_id": 2,
-    "sign_name": "Gemini",
-    "duration": "12 Years",
-    "start_date": "30-6-2043",
-    "end_date": "30-6-2055"
-  },
-  {
-    "sign_id": 1,
-    "sign_name": "Taurus",
-    "duration": "1 Years",
-    "start_date": "30-6-2055",
-    "end_date": "30-6-2056"
-  },
-  {
-    "sign_id": 0,
-    "sign_name": "Aries",
-    "duration": "6 Years",
-    "start_date": "30-6-2056",
-    "end_date": "30-6-2062"
-  },
-  {
-    "sign_id": 11,
-    "sign_name": "Pisces",
-    "duration": "7 Years",
-    "start_date": "30-6-2062",
-    "end_date": "30-6-2069"
-  },
-  {
-    "sign_id": 10,
-    "sign_name": "Aquarius",
-    "duration": "6 Years",
-    "start_date": "30-6-2069",
-    "end_date": "30-6-2075"
-  },
-  {
-    "sign_id": 9,
-    "sign_name": "Capricorn",
-    "duration": "2 Years",
-    "start_date": "30-6-2075",
-    "end_date": "30-6-2077"
-  },
-  {
-    "sign_id": 8,
-    "sign_name": "Sagittarius",
-    "duration": "8 Years",
-    "start_date": "30-6-2077",
-    "end_date": "30-6-2085"
-  }
-]
-```
-
 ### current_chardasha
 Returns the currently undergoing Char Dasha. It provides Major Period, Sub Period and Complete sub-sub period for the current date.
 
@@ -1763,7 +1650,7 @@ current_chardasha
 }
 ```
 
-### sub_chardasha
+### sub_chardasha/:sign_name
 Get all the sub periods of char dasha for the given major period rashi name in the API variable
 
 #### API Endpoint
@@ -2099,4 +1986,947 @@ basic_gem_suggestion
 }
 
 ```
+
+## Basic Numerology
+Provides detailed Numerology report.
+
+### numero_table
+Provides detailed Numerology report.
+
+#### API Endpoint
+numero_table
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/numero_table|
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| name | float | Your full name e, eg: Ajeet Kanojia|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "name": "Ajeet Kanojia",
+  "date": "6-121-2014",
+  "destiny_number": 8,
+  "radical_number": 6,
+  "name_number": 1,
+  "evil_num": "1,8",
+  "fav_color": "White",
+  "fav_day": "Thursday, Tuesday, Friday",
+  "fav_god": "Devi",
+  "fav_mantra": "|| Om Shum Shukray Namah ||",
+  "fav_metal": "Sillver",
+  "fav_stone": "Diamond, Opal",
+  "fav_substone": "Zircon, White Sapphire",
+  "friendly_num": "4,3,9",
+  "neutral_num": "2,5,7",
+  "radical_num": "6",
+  "radical_ruler": "Venus"
+}
+
+```
+
+## Basic Panchang
+The package consists of the five panchang elements which are day, nakshatra, yog, karan and tithi along with sunrise and sunset timings. This also includes chaugadiya and planetary degrees at that point of time.
+
+#### We have two types of Panchang APIs
+
+**1\. Panchang at specified date and time**
+Here, following APIs are used and date and time along with latitude, longitude and timezone are expected -
+
+*   [1\. basic_panchang](#-basic-panchang/basic_panchang)
+*   [2\. planet_panchang](#-basic-panchang/planet_panchang)
+*   [3\. advanced_panchang](#-advanced-panchang/advanced_panchang)
+
+**2\. Panchang at Sunsrise for given day**
+Following APIs should be used for getting the panchang data points at the time of sunrise which are used by traditional calendars-
+
+*   [1\. basic_panchang/sunrise](#-basic-panchang/basic_panchang/sunrise)
+*   [2\. planet_panchang/sunrise](#-basic-panchang/planet_panchang/sunrise)
+*   [2\. advanced_panchang/sunrise](#-advanced-panchang/advanced_panchang/sunrise)
+*   [4\. chaughadiya_muhurta](#-advanced-panchang/chaughadiya_muhurta)
+*   [5\. hora_muhurta](#-advanced-panchang/hora_muhurta)
+
+**" Here only date along with latitude, longitude and timezone are expected to be passed. No time is required. "**
+
+### basic_panchang
+
+Provides data points for panchang elements.
+
+#### API Endpoint
+
+basic_panchang
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/basic_panchang |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| hour | int | Panchang hour, eg:12 |
+| min | int | Panchang minute, eg:34 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```javascript
+{
+  "day": "Wednesday",
+  "tithi": "Shukla-Ashtami",
+  "yog": "Vaidhriti",
+  "nakshatra": "Krittika",
+  "karan": "Vishti",
+  "sunrise": "7:3:17",
+  "sunset": "18:43:38"
+}
+
+```
+
+### basic_panchang/sunrise
+
+Provides data points for panchang elements.
+
+#### API Endpoint
+
+basic_panchang/sunrise
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/basic_panchang/sunrise |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| hour | int | Panchang hour, eg:12 |
+| min | int | Panchang minute, eg:34 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```javascript
+{
+  "day": "Wednesday",
+  "tithi": "Shukla-Ashtami",
+  "yog": "Vaidhriti",
+  "nakshatra": "Krittika",
+  "karan": "Vishti",
+  "sunrise": "7:3:17",
+  "sunset": "18:43:38"
+}
+
+```
+
+### planet_panchang
+
+Provides panchang planetary degrees ,retrograde and positions.
+
+#### API Endpoint
+
+planet_panchang
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/planet_panchang |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| hour | int | Panchang hour, eg:12 |
+| min | int | Panchang minute, eg:34 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```javascript
+[
+  {
+    "id": 0,
+    "name": "Sun",
+    "fullDegree": 312.30400347269256,
+    "normDegree": 12.304003472692557,
+    "isRetro": "false",
+    "sign": "Aquarius",
+    "sign_lord": "Saturn",
+    "nakshatra": "Shatbhisha",
+    "nakshatra_lord": "Rahu"
+  },
+  {
+    "id": 1,
+    "name": "Moon",
+    "fullDegree": 37.45112477913563,
+    "normDegree": 7.4511247791356325,
+    "isRetro": "false",
+    "sign": "Taurus",
+    "sign_lord": "Venus",
+    "nakshatra": "Krittika",
+    "nakshatra_lord": "Sun"
+  },
+  {
+    "id": 2,
+    "name": "Mars",
+    "fullDegree": 340.0086052768496,
+    "normDegree": 10.008605276849607,
+    "isRetro": "false",
+    "sign": "Pisces",
+    "sign_lord": "Jupiter",
+    "nakshatra": "Uttra Bhadrapad",
+    "nakshatra_lord": "Saturn"
+  },
+  {
+    "id": 3,
+    "name": "Mercury",
+    "fullDegree": 285.56691716258143,
+    "normDegree": 15.566917162581433,
+    "isRetro": "false",
+    "sign": "Capricorn",
+    "sign_lord": "Saturn",
+    "nakshatra": "Shravan",
+    "nakshatra_lord": "Moon"
+  },
+  {
+    "id": 4,
+    "name": "Jupiter",
+    "fullDegree": 111.19916911928078,
+    "normDegree": 21.199169119280782,
+    "isRetro": "true",
+    "sign": "Cancer",
+    "sign_lord": "Moon",
+    "nakshatra": "Ashlesha",
+    "nakshatra_lord": "Mercury"
+  },
+  {
+    "id": 5,
+    "name": "Venus",
+    "fullDegree": 341.4409638339589,
+    "normDegree": 11.440963833958904,
+    "isRetro": "false",
+    "sign": "Pisces",
+    "sign_lord": "Jupiter",
+    "nakshatra": "Uttra Bhadrapad",
+    "nakshatra_lord": "Saturn"
+  },
+  {
+    "id": 6,
+    "name": "Saturn",
+    "fullDegree": 220.60759834888617,
+    "normDegree": 10.607598348886171,
+    "isRetro": "false",
+    "sign": "Scorpio",
+    "sign_lord": "Mars",
+    "nakshatra": "Anuradha",
+    "nakshatra_lord": "Saturn"
+  },
+  {
+    "id": 7,
+    "name": "Rahu",
+    "fullDegree": 167.93931821066,
+    "normDegree": 17.93931821065999,
+    "isRetro": "true",
+    "sign": "Virgo",
+    "sign_lord": "Mercury",
+    "nakshatra": "Hast",
+    "nakshatra_lord": "Moon"
+  },
+  {
+    "id": 8,
+    "name": "Ketu",
+    "fullDegree": 347.93931821065996,
+    "normDegree": 17.939318210659962,
+    "isRetro": "true",
+    "sign": "Pisces",
+    "sign_lord": "Jupiter",
+    "nakshatra": "Revati",
+    "nakshatra_lord": "Mercury"
+  },
+  {
+    "id": 9,
+    "name": "Asc",
+    "fullDegree": 57.565378655311946,
+    "normDegree": 27.565378655311946,
+    "isRetro": false,
+    "sign": "Taurus",
+    "sign_lord": "Venus",
+    "nakshatra": "Mrigshira",
+    "nakshatra_lord": "Mars"
+  }
+]
+
+```
+
+### planet_panchang/sunrise
+
+Provides panchang planetary degrees and positions for sunrise.
+
+#### API Endpoint
+
+planet_panchang/sunrise
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/planet_panchang/sunrise |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Panchang day, eg: 10 |
+| month     | int      |   Panchang month, eg:5 |
+| year | int      |    Panchang year, eg:2015 |
+| hour | int | Panchang hour, eg:12 |
+| min | int | Panchang minute, eg:34 |
+| lat | float | Panchang place latitude, eg: 19.234|
+| lon | float | Panchang place longitude, eg: 72.843|
+| tzone | float | Panchang place timezone, eg: 5.5|
+
+#### Response Data ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```javascript
+[
+  {
+    "id": 0,
+    "name": "Sun",
+    "fullDegree": 312.30400347269256,
+    "normDegree": 12.304003472692557,
+    "isRetro": "false",
+    "sign": "Aquarius",
+    "sign_lord": "Saturn",
+    "nakshatra": "Shatbhisha",
+    "nakshatra_lord": "Rahu"
+  },
+  {
+    "id": 1,
+    "name": "Moon",
+    "fullDegree": 37.45112477913563,
+    "normDegree": 7.4511247791356325,
+    "isRetro": "false",
+    "sign": "Taurus",
+    "sign_lord": "Venus",
+    "nakshatra": "Krittika",
+    "nakshatra_lord": "Sun"
+  },
+  {
+    "id": 2,
+    "name": "Mars",
+    "fullDegree": 340.0086052768496,
+    "normDegree": 10.008605276849607,
+    "isRetro": "false",
+    "sign": "Pisces",
+    "sign_lord": "Jupiter",
+    "nakshatra": "Uttra Bhadrapad",
+    "nakshatra_lord": "Saturn"
+  },
+  {
+    "id": 3,
+    "name": "Mercury",
+    "fullDegree": 285.56691716258143,
+    "normDegree": 15.566917162581433,
+    "isRetro": "false",
+    "sign": "Capricorn",
+    "sign_lord": "Saturn",
+    "nakshatra": "Shravan",
+    "nakshatra_lord": "Moon"
+  },
+  {
+    "id": 4,
+    "name": "Jupiter",
+    "fullDegree": 111.19916911928078,
+    "normDegree": 21.199169119280782,
+    "isRetro": "true",
+    "sign": "Cancer",
+    "sign_lord": "Moon",
+    "nakshatra": "Ashlesha",
+    "nakshatra_lord": "Mercury"
+  },
+  {
+    "id": 5,
+    "name": "Venus",
+    "fullDegree": 341.4409638339589,
+    "normDegree": 11.440963833958904,
+    "isRetro": "false",
+    "sign": "Pisces",
+    "sign_lord": "Jupiter",
+    "nakshatra": "Uttra Bhadrapad",
+    "nakshatra_lord": "Saturn"
+  },
+  {
+    "id": 6,
+    "name": "Saturn",
+    "fullDegree": 220.60759834888617,
+    "normDegree": 10.607598348886171,
+    "isRetro": "false",
+    "sign": "Scorpio",
+    "sign_lord": "Mars",
+    "nakshatra": "Anuradha",
+    "nakshatra_lord": "Saturn"
+  },
+  {
+    "id": 7,
+    "name": "Rahu",
+    "fullDegree": 167.93931821066,
+    "normDegree": 17.93931821065999,
+    "isRetro": "true",
+    "sign": "Virgo",
+    "sign_lord": "Mercury",
+    "nakshatra": "Hast",
+    "nakshatra_lord": "Moon"
+  },
+  {
+    "id": 8,
+    "name": "Ketu",
+    "fullDegree": 347.93931821065996,
+    "normDegree": 17.939318210659962,
+    "isRetro": "true",
+    "sign": "Pisces",
+    "sign_lord": "Jupiter",
+    "nakshatra": "Revati",
+    "nakshatra_lord": "Mercury"
+  },
+  {
+    "id": 9,
+    "name": "Asc",
+    "fullDegree": 57.565378655311946,
+    "normDegree": 27.565378655311946,
+    "isRetro": false,
+    "sign": "Taurus",
+    "sign_lord": "Venus",
+    "nakshatra": "Mrigshira",
+    "nakshatra_lord": "Mars"
+  }
+]
+
+```
+
+## Basic Vimshottari Dasha
+Get analysis of precise period of events to come.
+
+### current_vdasha
+Provides details of current vimshottari dasha
+
+#### API Endpoint
+current_vdasha
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/current_vdasha |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "major": {
+    "end": "17-9-2028 14:32",
+    "planet": "MERCURY",
+    "start": "18-9-2011 11:43"
+  },
+  "minor": {
+    "end": "11-2-2015 7:29",
+    "planet": "KETU",
+    "start": "14-2-2014 2:43"
+  },
+  "sub_minor": {
+    "end": "22-12-2014 0:0",
+    "planet": "SATURN",
+    "start": "25-10-2014 15:39"
+  },
+  "sub_sub_minor": {
+    "end": "14-12-2014 8:30",
+    "planet": "RAHU",
+    "start": "5-12-2014 18:2"
+  },
+  "sub_sub_sub_minor": {
+    "end": "10-12-2014 18:28",
+    "planet": "MERCURY",
+    "start": "9-12-2014 13:13"
+  }
+}
+```
+
+### current_vdasha_all
+Provides details of All Level of current vimshottari dasha
+
+#### API Endpoint
+current_vdasha_all
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/current_vdasha_all |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+{
+  "major": {
+    "dasha_period": [
+      {
+        "planet": "Rahu",
+        "start": "14-1-2013 23:56",
+        "end": "15-1-2031 8:34"
+      },
+      {
+        "planet": "Jupiter",
+        "start": "15-1-2031 8:34",
+        "end": "15-1-2047 5:34"
+      },
+      {
+        "planet": "Saturn",
+        "start": "15-1-2047 5:34",
+        "end": "14-1-2066 20:1"
+      },
+      {
+        "planet": "Mercury",
+        "start": "14-1-2066 20:1",
+        "end": "14-1-2083 22:50"
+      },
+      {
+        "planet": "Ketu",
+        "start": "14-1-2083 22:50",
+        "end": "14-1-2090 15:31"
+      },
+      {
+        "planet": "Venus",
+        "start": "14-1-2090 15:31",
+        "end": "15-1-2110 11:46"
+      },
+      {
+        "planet": "Sun",
+        "start": "15-1-2110 11:46",
+        "end": "15-1-2116 22:39"
+      },
+      {
+        "planet": "Moon",
+        "start": "15-1-2116 22:39",
+        "end": "15-1-2126 8:47"
+      },
+      {
+        "planet": "Mars",
+        "start": "15-1-2126 8:47",
+        "end": "15-1-2133 1:28"
+      }
+    ]
+  },
+  "minor": {
+    "planet": {
+      "major": "Rahu"
+    },
+    "dasha_period": [
+      {
+        "planet": "Rahu",
+        "start": "14-1-2013 23:56",
+        "end": "28-9-2015 3:38"
+      },
+      {
+        "planet": "Jupiter",
+        "start": "28-9-2015 3:38",
+        "end": "20-2-2018 17:35"
+      },
+      {
+        "planet": "Saturn",
+        "start": "20-2-2018 17:35",
+        "end": "27-12-2020 16:9"
+      },
+      {
+        "planet": "Mercury",
+        "start": "27-12-2020 16:9",
+        "end": "17-7-2023 0:58"
+      },
+      {
+        "planet": "Ketu",
+        "start": "17-7-2023 0:58",
+        "end": "3-8-2024 13:4"
+      },
+      {
+        "planet": "Venus",
+        "start": "3-8-2024 13:4",
+        "end": "4-8-2027 6:31"
+      },
+      {
+        "planet": "Sun",
+        "start": "4-8-2027 6:31",
+        "end": "27-6-2028 23:44"
+      },
+      {
+        "planet": "Moon",
+        "start": "27-6-2028 23:44",
+        "end": "27-12-2029 20:28"
+      },
+      {
+        "planet": "Mars",
+        "start": "27-12-2029 20:28",
+        "end": "15-1-2031 8:34"
+      }
+    ]
+  },
+  "sub_minor": {
+    "planet": {
+      "major": "Rahu",
+      "minor": "Rahu"
+    },
+    "dasha_period": [
+      {
+        "planet": "Rahu",
+        "start": "14-1-2013 23:56",
+        "end": "11-6-2013 22:5"
+      },
+      {
+        "planet": "Jupiter",
+        "start": "11-6-2013 22:5",
+        "end": "21-10-2013 9:47"
+      },
+      {
+        "planet": "Saturn",
+        "start": "21-10-2013 9:47",
+        "end": "26-3-2014 13:10"
+      },
+      {
+        "planet": "Mercury",
+        "start": "26-3-2014 13:10",
+        "end": "13-8-2014 6:5"
+      },
+      {
+        "planet": "Ketu",
+        "start": "13-8-2014 6:5",
+        "end": "9-10-2014 18:42"
+      },
+      {
+        "planet": "Venus",
+        "start": "9-10-2014 18:42",
+        "end": "23-3-2015 3:19"
+      },
+      {
+        "planet": "Sun",
+        "start": "23-3-2015 3:19",
+        "end": "11-5-2015 10:42"
+      },
+      {
+        "planet": "Moon",
+        "start": "11-5-2015 10:42",
+        "end": "1-8-2015 15:1"
+      },
+      {
+        "planet": "Mars",
+        "start": "1-8-2015 15:1",
+        "end": "28-9-2015 3:38"
+      }
+    ]
+  },
+  "sub_sub_minor": {
+    "planet": {
+      "major": "Rahu",
+      "minor": "Rahu",
+      "sub_minor": "Venus"
+    },
+    "dasha_period": [
+      {
+        "planet": "Venus",
+        "start": "9-10-2014 18:42",
+        "end": "6-11-2014 4:8"
+      },
+      {
+        "planet": "Sun",
+        "start": "6-11-2014 4:8",
+        "end": "14-11-2014 9:22"
+      },
+      {
+        "planet": "Moon",
+        "start": "14-11-2014 9:22",
+        "end": "28-11-2014 2:5"
+      },
+      {
+        "planet": "Mars",
+        "start": "28-11-2014 2:5",
+        "end": "7-12-2014 16:11"
+      },
+      {
+        "planet": "Rahu",
+        "start": "7-12-2014 16:11",
+        "end": "1-1-2015 7:53"
+      },
+      {
+        "planet": "Jupiter",
+        "start": "1-1-2015 7:53",
+        "end": "23-1-2015 5:50"
+      },
+      {
+        "planet": "Saturn",
+        "start": "23-1-2015 5:50",
+        "end": "18-2-2015 6:24"
+      },
+      {
+        "planet": "Mercury",
+        "start": "18-2-2015 6:24",
+        "end": "13-3-2015 13:13"
+      },
+      {
+        "planet": "Ketu",
+        "start": "13-3-2015 13:13",
+        "end": "23-3-2015 3:19"
+      }
+    ]
+  },
+  "sub_sub_sub_minor": {
+    "planet": {
+      "major": "Rahu",
+      "minor": "Rahu",
+      "sub_minor": "Venus",
+      "sub_sub_minor": "Ketu"
+    },
+    "dasha_period": [
+      {
+        "planet": "Ketu",
+        "start": "13-3-2015 13:13",
+        "end": "14-3-2015 2:38"
+      },
+      {
+        "planet": "Venus",
+        "start": "14-3-2015 2:38",
+        "end": "15-3-2015 16:59"
+      },
+      {
+        "planet": "Sun",
+        "start": "15-3-2015 16:59",
+        "end": "16-3-2015 4:30"
+      },
+      {
+        "planet": "Moon",
+        "start": "16-3-2015 4:30",
+        "end": "16-3-2015 23:40"
+      },
+      {
+        "planet": "Mars",
+        "start": "16-3-2015 23:40",
+        "end": "17-3-2015 13:6"
+      },
+      {
+        "planet": "Rahu",
+        "start": "17-3-2015 13:6",
+        "end": "18-3-2015 23:37"
+      },
+      {
+        "planet": "Jupiter",
+        "start": "18-3-2015 23:37",
+        "end": "20-3-2015 6:17"
+      },
+      {
+        "planet": "Saturn",
+        "start": "20-3-2015 6:17",
+        "end": "21-3-2015 18:43"
+      },
+      {
+        "planet": "Mercury",
+        "start": "21-3-2015 18:43",
+        "end": "23-3-2015 3:19"
+      }
+    ]
+  }
+}
+```
+
+
+### major_vdasha
+Provides details of Major vimshottari dasha
+
+#### API Endpoint
+major_vdasha
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/major_vdasha |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "planet": "JUPITER",
+    "start": "18-1-2010 8:54",
+    "end": "18-1-2026 5:55"
+  },
+  {
+    "planet": "SATURN",
+    "start": "18-1-2026 5:55",
+    "end": "17-1-2045 20:21"
+  },
+  {
+    "planet": "MERCURY",
+    "start": "17-1-2045 20:21",
+    "end": "17-1-2062 23:10"
+  },
+  {
+    "planet": "KETU",
+    "start": "17-1-2062 23:10",
+    "end": "17-1-2069 15:52"
+  },
+  {
+    "planet": "VENUS",
+    "start": "17-1-2069 15:52",
+    "end": "17-1-2089 12:7"
+  },
+  {
+    "planet": "SUN",
+    "start": "17-1-2089 12:7",
+    "end": "17-1-2095 22:59"
+  },
+  {
+    "planet": "MOON",
+    "start": "17-1-2095 22:59",
+    "end": "18-1-2105 9:7"
+  },
+  {
+    "planet": "MARS",
+    "start": "18-1-2105 9:7",
+    "end": "19-1-2112 1:49"
+  },
+  {
+    "planet": "RAHU",
+    "start": "19-1-2112 1:49",
+    "end": "18-1-2130 10:26"
+  }
+]
+```
+
+### major_vdasha
+Provides details of Major vimshottari dasha
+
+#### API Endpoint
+major_vdasha
+
+#### Method & URL
+
+| Method | Full URL |
+| --- | --- |
+| POST | https://api.vedicrishiastro.com/v1/major_vdasha |
+
+#### Request Data
+
+| Params        | Data type     | Descriptions  |
+| ------------- |:-------------| :-----|
+| day      | int | Birth day, eg: 10 |
+| month     | int      |   Birth month, eg:5 |
+| year | int      |    Birth year, eg:2015 |
+| lat | float | Birth place latitude, eg: 19.234|
+| lon | float | Birth place longitude, eg: 72.843|
+| tzone | float | Birth place timezone, eg: 5.5|
+
+#### Response Data  ![alt text](http://localhost/astrologyapi/img/right-arrow.png "Logo Title Text 1")
+```json
+[
+  {
+    "planet": "JUPITER",
+    "start": "18-1-2010 8:54",
+    "end": "18-1-2026 5:55"
+  },
+  {
+    "planet": "SATURN",
+    "start": "18-1-2026 5:55",
+    "end": "17-1-2045 20:21"
+  },
+  {
+    "planet": "MERCURY",
+    "start": "17-1-2045 20:21",
+    "end": "17-1-2062 23:10"
+  },
+  {
+    "planet": "KETU",
+    "start": "17-1-2062 23:10",
+    "end": "17-1-2069 15:52"
+  },
+  {
+    "planet": "VENUS",
+    "start": "17-1-2069 15:52",
+    "end": "17-1-2089 12:7"
+  },
+  {
+    "planet": "SUN",
+    "start": "17-1-2089 12:7",
+    "end": "17-1-2095 22:59"
+  },
+  {
+    "planet": "MOON",
+    "start": "17-1-2095 22:59",
+    "end": "18-1-2105 9:7"
+  },
+  {
+    "planet": "MARS",
+    "start": "18-1-2105 9:7",
+    "end": "19-1-2112 1:49"
+  },
+  {
+    "planet": "RAHU",
+    "start": "19-1-2112 1:49",
+    "end": "18-1-2130 10:26"
+  }
+]
+```
+
+### sub_vdasha/:mahaDashaLord
+Provide antardasha details
+
 
